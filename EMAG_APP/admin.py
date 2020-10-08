@@ -13,13 +13,13 @@ class UserAdmin(UserAdmin):
     list_filter = ('full_name', 'dept_name',)
     fieldsets = (
         ('Personal Information', {
-         'fields': ('email', 'full_name', 'dept_name')}),
+         'fields': ('email', 'full_name', 'dept_name', 'phone_no')}),
         ('Permissions', {'fields': ('is_staff', 'is_active')}),
     )
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'password1', 'password2', 'is_staff', 'is_active',)}
+            'fields': ('email', 'password1', 'password2', 'phone_no', 'is_staff', 'is_active',)}
          ),
     )
     readonly_fields = ('email', 'full_name', 'dept_name')
@@ -28,16 +28,17 @@ class UserAdmin(UserAdmin):
 
 
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('project_title', 'project_description')
+    list_display = ('project_title', 'project_data')
 
 
 class AchievementAdmin(admin.ModelAdmin):
-    list_display = ('achievement_title', 'achievement_field')
+    list_display = ('achievement_title',
+                    'achievement_field', 'achievement_data')
 
 
 class EventAdmin(admin.ModelAdmin):
     list_display = ('event_title', 'event_category',
-                    'event_date')
+                    'event_date', 'organised_by')
 
 
 admin.site.register(User, UserAdmin)
