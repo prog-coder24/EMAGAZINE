@@ -22,7 +22,7 @@ class UserAdmin(UserAdmin):
             'fields': ('email', 'password1', 'password2', 'phone_no', 'is_staff', 'is_active',)}
          ),
     )
-    readonly_fields = ('email', 'full_name', 'dept_name')
+    readonly_fields = ('email', 'full_name', 'dept_name', 'phone_no')
     search_fields = ('email',)
     ordering = ('email',)
 

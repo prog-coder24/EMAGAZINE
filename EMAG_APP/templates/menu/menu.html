@@ -1,0 +1,23 @@
+{% extends 'index.html' %} {% load static %} 
+{% block body %}
+<div class="container event-sec">
+    <h2 class="text-uppercase text-center font-weight-bold text-white">
+        Browse our Emagazine
+    </h2>
+    <hr />
+    <div class="event-section my-5">
+        <div class="row" style="overflow-x: hidden">
+            <div class="col-lg-12" data-aos="slide-right" data-aos-duration="1000">
+                <img class="img-fluid" src="{% static 'img/timeline.jpg'%}" alt="" />
+            </div>
+            <div class="col-lg-12 text-white" data-aos="slide-left" data-aos-duration="1000">
+                <h2 class="font-weight-bold text-uppercase">Events</h2>
+                <h4>
+                    Get updates and information of upcoming events, fests, workshops and much more
+                </h4>
+                <a class="btn button" href="/categories/events/">Explore</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

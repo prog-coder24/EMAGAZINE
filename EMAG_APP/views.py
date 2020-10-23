@@ -9,14 +9,19 @@ from .models import *
 
 
 def home_view(request):
+    return render(request, "home.html")
 
-    context = {"user": "Aaditya"}
-
-    users = User.objects.get(id=1)
-
-    return render(request, "index.html", {'users': users})
+def menu_view(request):
+    return render(request, "menu/menu.html")
 
 
 def event_view(request):
+    return render(request, "event/event.html")
 
-    return render(request, "event.html")
+def project_view(request):
+    return render(request, "project/project.html")
+
+def achievement_view(request):
+    return render(request, "achievement/achievement.html")
+
+

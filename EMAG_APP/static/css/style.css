@@ -1,5 +1,188 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap");
 
-body {
-  font-family: "Cormorant Garamond", serif;
+
+body{
+
+    font-family: 'Josefin Sans', sans-serif;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-color: #fff;
+    color: #111;
+}
+.info-text{
+  border-left: 5px solid yellow;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.header {
+  width: 100%;
+  height: 50px;
+  display: block;
+}
+.heading {
+  float: left;
+  vertical-align: middle;
+  color: white;
+  font-family: corbel;
+}
+.footer {
+  background-color: black;
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  }
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    padding-bottom: 0px;
+    width: 150px;
+    position: fixed;
+    text-decoration-color: black;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 10px;
+    border-bottom: 3px #ffff00 transparent;
+
+}
+.nav-link:hover{
+  color: #000;
+  border-bottom: 3px #ffff00 solid;
+}
+.form-control:focus, .form-control:active {
+  border-color: #000;
+  outline: 0;
+  box-shadow: inset 0 0 0;
+}
+.event-sec{
+  background-color: #000;
+}
+.main-display-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px
+}
+.font-weight-light{
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+.subscribe-input {
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.subscribe-btn {
+  border-radius: 30px;
+}
+.emagazine-info-wrapper,
+.about-us-wrapper {
+    width: 100%;
+    background-color: #111;
+    padding: 100px 0;
+    text-align: left;
+    
+    margin-bottom: 120px;
+    padding-left: 10px;
+    margin-top: 10px;
+    color: #fff;
+}
+.about-us-wrapper {
+  padding: 80px 0;
+  margin-bottom: 80px;
+}
+
+.event-category {
+  background-color: #2e3787;
+  width: 25%;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.organised-by,
+.sponsored-by {
+    background-color: #fafafa;
+    padding: 40px;
+    border-left: 7px #2e3787 solid;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.event-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+}
+
+.event {
+    background-color: #fff;
+}
+.category-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  color: #fff;
+}
+
+.category-wrapper a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.category {
+  text-align: center;
+  background-color: #02042b;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  border: none;
+}
+@media screen and (max-width: 768px) {
+  h1,
+  h2,
+  h3 {
+      font-size: 20px;
+  }
+  h4 {
+      font-size: 18px;
+  }
+  .achievement-section,
+  .event-section,
+  .project-section {
+      padding: 10px;
+      border: 1px #eee solid;
+  }
+  .main-display-wrapper {
+      display: block;
+  }
+  .categories-list {
+      margin-bottom: 20px;
+  }
+  .login-form form {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+  .nav-link {
+      margin: 0px;
+  }
 }
