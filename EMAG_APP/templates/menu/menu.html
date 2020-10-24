@@ -1,23 +1,74 @@
 {% extends 'index.html' %} {% load static %} 
 {% block body %}
-<div class="container event-sec">
-    <h2 class="text-uppercase text-center font-weight-bold text-white">
-        Browse our Emagazine
-    </h2>
-    <hr />
-    <div class="event-section my-5">
+<div class="browse-info-wrapper">
+    <div class="container">
         <div class="row" style="overflow-x: hidden">
-            <div class="col-lg-12" data-aos="slide-right" data-aos-duration="1000">
-                <img class="img-fluid" src="{% static 'img/timeline.jpg'%}" alt="" />
-            </div>
-            <div class="col-lg-12 text-white" data-aos="slide-left" data-aos-duration="1000">
-                <h2 class="font-weight-bold text-uppercase">Events</h2>
-                <h4>
-                    Get updates and information of upcoming events, fests, workshops and much more
-                </h4>
-                <a class="btn button" href="/categories/events/">Explore</a>
+            <div class="col-lg-12" >
+                <h1 class="font-weight-bold info-browse" data-aos="zoom-in" data-aos-duration="1000">
+                  Discover our magazine
+                <hr/>   
+                </h1>
             </div>
         </div>
     </div>
 </div>
+
+<div class="container">
+<div class="event-section my-5">
+    <div class="row" style="overflow-x: hidden">
+        <div class="col-lg-6" data-aos="slide-right" data-aos-duration="1000">
+            <img class="img-fluid" src="{% static 'img/timeline.jpg'%}" alt="" />
+        </div>
+        <div class="col-lg-6 m-auto" data-aos="slide-left" data-aos-duration="1000">
+            <h2 class="font-weight-bold text-uppercase">Events</h2>
+            <h4>
+                Get updates and information of upcoming events, fests, workshops and much more
+            </h4>
+            <a class="btn button" href="/categories/events/">Explore</a>
+        </div>
+    </div>
+</div>
+<div class="achievement-section my-5">
+    <div class="row" style="overflow-x: hidden">
+        <div class="col-lg-6 m-auto" data-aos="slide-right" data-aos-duration="1000">
+            <h2 class="font-weight-bold text-uppercase">Achievements</h2>
+            <h4>
+                Get to know about achievements which made a positive impact and contribution to our college
+            </h4>
+            <a class="btn button" href="#">Explore</a>
+        </div>
+        <div class="col-lg-6 m-auto" data-aos="slide-left" data-aos-duration="1000">
+            <img class="img-fluid" src="{% static 'img/achievement.jpg'%}" alt="" />
+        </div>
+    </div>
+</div>
+<div class="project-section my-5">
+    <div class="row" style="overflow-x: hidden">
+        <div class="col-lg-6" data-aos="slide-right" data-aos-duration="1000">
+            <img class="img-fluid" src="{% static 'img/project.jpg'%}" alt="" />
+        </div>
+        <div class="col-lg-6 m-auto" data-aos="slide-left" data-aos-duration="1000">
+            <h2 class="font-weight-bold text-uppercase">Projects</h2>
+            <h4>
+                Get all the latest projects information, project work and project development at one place
+            </h4>
+            <a class="btn button" href="/categories/projects/">Explore</a>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {% endblock %}

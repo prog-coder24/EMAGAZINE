@@ -11,7 +11,8 @@ body{
     color: #111;
 }
 .info-text{
-  border-left: 5px solid yellow;
+  border-left: 5px solid #ff9c33;
+ 
 }
 
 * {
@@ -32,7 +33,7 @@ body{
   font-family: corbel;
 }
 .footer {
-  background-color: black;
+  background-color: #111;
   padding: 30px;
   text-align: center;
   color: #fff;
@@ -41,6 +42,31 @@ body{
   bottom: 0;
   width: 100%;
   }
+  .button {
+    background-color: #ff9c33;
+    color: #111;
+    padding: 10px 20px;
+    outline: none;
+    box-shadow: none;
+    
+}
+
+.button:hover,
+.button:active {
+    background-color: #111;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #2e3787;
+}
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
@@ -49,28 +75,26 @@ body{
     padding-bottom: 0px;
     width: 150px;
     position: fixed;
-    text-decoration-color: black;
+    text-decoration-color: #111;
 }
 
 .nav-link {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0 10px;
-    border-bottom: 3px #ffff00 transparent;
+    border-bottom: 3px #ff9c33 transparent;
 
 }
 .nav-link:hover{
   color: #000;
-  border-bottom: 3px #ffff00 solid;
+  border-bottom: 3px #ff9c33 solid;
 }
 .form-control:focus, .form-control:active {
   border-color: #000;
   outline: 0;
   box-shadow: inset 0 0 0;
 }
-.event-sec{
-  background-color: #000;
-}
+
 .main-display-wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -87,8 +111,21 @@ body{
 }
 
 .subscribe-btn {
-  border-radius: 30px;
+  border-radius: 15px;
+  padding: 10px 20px;
 }
+.browse-info-wrapper{
+  width: 100%;
+  background-color: #111;
+  text-align: center;
+  padding: 100px 0px;
+  color: #fff;
+}
+hr {
+background-color: #ff9c33;
+}
+  
+
 .emagazine-info-wrapper,
 .about-us-wrapper {
     width: 100%;
@@ -156,6 +193,31 @@ body{
 
 .card {
   border: none;
+}
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+.login-form form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.event-section h2,
+.achievement-section h2,
+.project-section h2 {
+    letter-spacing: 1px;
 }
 @media screen and (max-width: 768px) {
   h1,
