@@ -8,7 +8,9 @@ body{
     background-size: cover;
     -o-background-size: cover;
     background-color: #fff;
-    color: #111;
+    color: #070707;
+    margin-bottom: 150px;
+
 }
 .info-text{
   border-left: 5px solid #ff9c33;
@@ -33,7 +35,7 @@ body{
   font-family: corbel;
 }
 .footer {
-  background-color: #111;
+  background-color: #070707;
   padding: 30px;
   text-align: center;
   color: #fff;
@@ -44,23 +46,27 @@ body{
   }
   .button {
     background-color: #ff9c33;
-    color: #111;
+    color: #070707;
     padding: 10px 20px;
     outline: none;
     box-shadow: none;
     
 }
+.menu-wrapper{
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
 
 .button:hover,
 .button:active {
-    background-color: #111;
+    background-color: #070707;
     color: #fff;
     padding: 10px 20px;
 }
 
 a {
     text-decoration: none;
-    color: #111;
+    color: #070707;
 }
 
 a:hover {
@@ -75,7 +81,7 @@ a:hover {
     padding-bottom: 0px;
     width: 150px;
     position: fixed;
-    text-decoration-color: #111;
+    text-decoration-color: #070707;
 }
 
 .nav-link {
@@ -86,11 +92,11 @@ a:hover {
 
 }
 .nav-link:hover{
-  color: #000;
+  color: #070707;
   border-bottom: 3px #ff9c33 solid;
 }
 .form-control:focus, .form-control:active {
-  border-color: #000;
+  border-color: #070707;
   outline: 0;
   box-shadow: inset 0 0 0;
 }
@@ -116,20 +122,24 @@ a:hover {
 }
 .browse-info-wrapper{
   width: 100%;
-  background-color: #111;
+  background-color: #070707;
   text-align: center;
   padding: 100px 0px;
   color: #fff;
 }
-hr {
+.browse-info-wrapper hr {
 background-color: #ff9c33;
+width: 110px;
+margin: 2px auto;
+text-align: center;
+height: 0px;
 }
   
-
+.event-info-wrapper,
 .emagazine-info-wrapper,
 .about-us-wrapper {
     width: 100%;
-    background-color: #111;
+    background-color: #070707;
     padding: 100px 0;
     text-align: left;
     
@@ -138,6 +148,23 @@ background-color: #ff9c33;
     margin-top: 10px;
     color: #fff;
 }
+ 
+.event-info-wrapper
+{
+  background:linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/static/img/eicon.jpg');
+  background-size: cover;
+  padding: 400px 0px;
+}
+.img-fluid{
+  max-width: 100%;
+  height: auto;
+}
+.event-wrapper{
+  display: grid;
+  grid-template-columns: 4fr 4fr;
+}
+
+ 
 .about-us-wrapper {
   padding: 80px 0;
   margin-bottom: 80px;
@@ -217,8 +244,9 @@ background-color: #ff9c33;
 .event-section h2,
 .achievement-section h2,
 .project-section h2 {
-    letter-spacing: 1px;
+    letter-spacing: 0px;
 }
+
 @media screen and (max-width: 768px) {
   h1,
   h2,
@@ -247,4 +275,6 @@ background-color: #ff9c33;
   .nav-link {
       margin: 0px;
   }
+
+  
 }

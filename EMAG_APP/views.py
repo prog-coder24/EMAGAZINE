@@ -14,9 +14,10 @@ def home_view(request):
 def menu_view(request):
     return render(request, "menu/menu.html")
 
-
 def event_view(request):
-    return render(request, "event/event.html")
+
+    events = Event.objects.all()
+    return render(request, "event/event.html", {"events" : events})
 
 def project_view(request):
     return render(request, "project/project.html")
