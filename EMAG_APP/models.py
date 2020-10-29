@@ -60,9 +60,9 @@ class Achievement(models.Model):
 
 
 EVENT_CHOICES = (
-    ("Fests", "Fests"),
-    ("Workshops", "Workshops"),
-    ("Activities", "Activities")
+    ("Fest", "Fest"),
+    ("Workshop", "Workshop"),
+    ("Activity", "Activity")
 )
 
 
