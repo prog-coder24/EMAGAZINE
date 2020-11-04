@@ -1,0 +1,48 @@
+{% extends 'base.html' %}{% load static %}
+{% block body %}
+<div class="devent-info-wrapper my-4">
+    <div class="container w-100">
+        <div class="row" style="overflow-x: hidden">
+            <div class="col-lg-12">
+                <div class="banner">
+                <img class="img-fluid w-100" src="{{ event.event_banner.url }}" alt="" style="height: 700px"/>
+                </div>
+                <br />
+            </div>
+             
+        </div>
+    </div>
+     
+            <div class="container">
+             <div class="title">
+                <h1>{{ event.event_title }}</h1>
+            </div>
+            <div class="date-uploaded">
+                <p class="font-weight-bold text-muted">
+                    by {{ event.user_id.full_name }}, {{ event.uploaded_at }}
+                </p>
+            </div>
+            <div class="content">{{ event.event_description | safe }}</div>
+            <div class="event-data text-center">
+                {% if event.event_data %}
+                <p>
+                    <a class="btn button" href="{{ event.event_data.url }}" download>Download Reference</a>
+                </p>
+                {% endif %}
+            </div>
+            <div class="organised-by mb-5 shadow-sm" data-aos="zoom-in" data-aos-duration="1000">
+                <h3 class="font-weight-bold mt-lg-2">
+                    Organised by {{ event.organised_by }}
+                </h3>
+            </div>
+            <div class="sponsored-by mb-5 shadow-sm" data-aos="zoom-in" data-aos-duration="1000">
+               
+                <h3 class="font-weight-bold mt-lg-2">
+                    Sponsored by {{ event.sponsored_by }}
+                </h3>
+            </div>
+            
+            </div>
+</div>
+</div>
+{% endblock %}

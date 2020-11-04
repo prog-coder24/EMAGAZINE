@@ -65,7 +65,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #2e3787;
+  color: #ff9c33;
 }
 .navbar-toggler:focus,
 .navbar-toggler:active,
@@ -77,16 +77,19 @@ a:hover {
   position: fixed;
   text-decoration-color: #070707;
 }
+.base {
+  background-color: #ff9c33;
+}
+.base .nav-link:hover {
+  color: #070707;
+}
 
 .nav-link {
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin: 0 10px;
-  border-bottom: 3px #ff9c33 transparent;
 }
 .nav-link:hover {
   color: #070707;
-  border-bottom: 3px #ff9c33 solid;
 }
 .form-control:focus,
 .form-control:active {
@@ -129,6 +132,8 @@ a:hover {
 }
 
 .event-info-wrapper,
+.ach-info-wrapper,
+.project-info-wrapper,
 .emagazine-info-wrapper,
 .about-us-wrapper {
   width: 100%;
@@ -141,13 +146,28 @@ a:hover {
   margin-top: 10px;
   color: #fff;
 }
-
+.content {
+  font-size: 20px;
+}
 .event-info-wrapper {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/static/img/eicon.jpg");
   background-size: cover;
-  padding: 400px 0px;
+  padding: 600px 0px;
 }
+.project-info-wrapper {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/img/projecticon.jpeg");
+  background-size: cover;
+  padding: 600px 0px;
+}
+.ach-info-wrapper {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/img/achicon.jpeg");
+  background-size: cover;
+  padding: 600px 0px;
+}
+
 .card-img-top .img-fluid {
   max-width: 100%;
   height: auto;
@@ -159,29 +179,42 @@ a:hover {
 .e-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 50px;
+  grid-gap: 47px;
 }
 .card-img-top {
   width: 100%;
-  height: 500px;
+  height: 360px;
+  transition: all 0.3s ease-in-out;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 }
 .card {
   height: auto;
+  width: 480px;
+  background-color: #fefefe;
+  border-radius: 50px;
+}
+
+.card:hover .card-img-top,
+.card:focus .card-img-top {
+  transform: scale(1.03);
+  opacity: 0.9;
 }
 .event-category {
-  background-color: #2e3787;
-  width: 25%;
+  background-color: #ff9c33;
+  padding: 8px 0;
+  margin: auto;
+  width: 26%;
   color: #fff;
-  text-align: center;
-  padding: 10px 0;
   text-transform: uppercase;
   font-weight: bold;
 }
 .organised-by,
 .sponsored-by {
   background-color: #fafafa;
+  margin-top: 20px;
   padding: 40px;
-  border-left: 7px #2e3787 solid;
+  border-left: 7px #ff9c33 solid;
   text-transform: uppercase;
   text-align: center;
 }
@@ -235,7 +268,12 @@ a:hover {
   width: 50%;
   margin: 0 auto;
 }
-
+.title {
+  letter-spacing: 0px;
+}
+.content {
+  size: 4px;
+}
 .event-section h2,
 .achievement-section h2,
 .project-section h2 {

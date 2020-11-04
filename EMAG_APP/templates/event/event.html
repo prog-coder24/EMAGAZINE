@@ -14,31 +14,20 @@
      </div>
 </div>
 
-<div class="container">
-            
-            
-            
-            
-            
-            
-             <div class="e-grid">
+<div class="container" style="overflow-x: hidden">
+            <div class="e-grid">
                 {% for event in events %}   
-             <div class="card text-center">
-             
+                <div class="card text-center">
                 <img class="card-img-top img-fluid" src="{{ event.event_banner.url }}" alt="event banner" >
                 <div class="card-body">
-                    <h3 class="card-title font-weight-bold"><a href="/event/{{ event.id }}">{{ event.event_title }}</a>
+                    <h3 class="card-title font-weight-bold"><a href="/events/{{ event.id }}">{{ event.event_title }}</a>
                     </h3>
-                    
                     <p class="font-weight-bold text-muted">{{ event.uploaded_at }}</p>
-                    <p class="font-weight-bold">Organised by {{ event.organised_by }}</p>
                     <p class="event-category shadow">{{ event.event_category }}</p>
-            </div>
-        </div>
-        
-            
-            {% endfor %}
-        </div> 
+                </div>
+                </div>
+                {% endfor %}
+             </div> 
             
 </div>
 

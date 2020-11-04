@@ -1,0 +1,41 @@
+{% extends 'base.html' %}{% load static %}
+{% block body %}
+<div class="devent-info-wrapper">
+    <div class="container w-100">
+        <div class="row" style="overflow-x: hidden">
+            <div class="col-lg-12">
+                <div class="banner">
+                <img class="img-fluid w-100" src="{{ achievement.achievement_banner.url }}" alt="" style="height: 700px"/>
+                </div>
+                <br />
+            </div>
+             
+        </div>
+    </div>
+     
+            <div class="container">
+             <div class="title">
+                <h1>{{ achievement.achievement_title }}</h1>
+            </div>
+            <div class="date-uploaded">
+                <p class="font-weight-bold text-muted">
+                    by {{ achievement.user_id.full_name }}, {{ achievement.uploaded_at }}
+                </p>
+            </div>
+            <div class="content">{{ achievement.achievement_description | safe }}</div>
+            <div class="ach-data text-center">
+                {% if achievement.achievement_data %}
+                <p>
+                    <a class="btn button" href="{{ achievement.achievement_data.url }}" download>Download Reference</a>
+                </p>
+                {% endif %}
+            </div>
+            <div class="organised-by mb-5 shadow-sm" data-aos="zoom-in" data-aos-duration="1000">
+                <h3 class="font-weight-bold mt-lg-2">
+                    
+                </h3>
+            </div>
+            </div>
+</div>
+</div>
+{% endblock %}
