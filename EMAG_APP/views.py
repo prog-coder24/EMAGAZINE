@@ -1,11 +1,13 @@
-# import Http Response from django
+
 from django.http import HttpResponse
 from django.shortcuts import render
-# get datetime
 import datetime
 from .models import *
-
-# create a function
+from .forms import *
+from django.views.decorators.csrf import csrf_protect
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect
 
 
 def home_view(request):
