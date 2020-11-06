@@ -82,6 +82,10 @@ def logout_view(request):
     return redirect(login_view)
 
 
+def option_view(request):
+    return render(request, "emag_admin/option.html")
+
+
 def authenticate_view(request):
 
     if request.method == 'POST':
@@ -92,7 +96,7 @@ def authenticate_view(request):
 
         if user is not None:
             login(request, user)
-            return redirect(event_form_view)
+            return redirect(option_view)
         else:
             return render(request, "emag_admin/login.html", {"error": "Invalid Credentials"})
 

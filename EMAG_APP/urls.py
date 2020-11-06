@@ -14,6 +14,7 @@ urlpatterns = [
     path('projects/<int:pk>', displayproj_view),
     path('login/', login_view),
     path('logout/', logout_view),
+    path('login/options/', option_view),
     path('success/', authenticate_view),
     path('welcome/', home_view),
 
