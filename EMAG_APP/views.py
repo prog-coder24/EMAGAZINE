@@ -36,6 +36,35 @@ def displayevent_view(request, pk):
     return None
 
 
+@login_required(login_url='/login/')
+def event_form_view(request):
+
+    uname = User.objects.all()
+    return render(request, "emag_admin/addEvent.html", {"uname": uname})
+
+
+@login_required(login_url='/login/')
+def add_event_view(request):
+
+    if request.method == 'POST':
+
+        title = request.POST.get('title')
+        description = request.POST.get('editor')
+        menu = request.POST.get('menu')
+        tags = request.POST.get('tags')
+        banner = request.FILES.get('banner')
+        data = request.FILES.get('data', None)
+        organised_by = request.POST.get('organised_by', None)
+        sponsored_by = request.POST.get('sponsored_by', None)
+        event_date = request.POST.get('event_date', None)
+        uploaded_at = request.POST.get('uploaded_at')
+
+        Event.objects.create(user_id=request.user, event_title=title, event_description=description, event_category=menu, event_tags=tags,
+                             event_banner=banner, event_data=data, organised_by=organised_by, sponsored_by=sponsored_by, event_date=event_date, uploaded_at=uploaded_at)
+
+        return redirect(etab_view)
+
+
 def project_view(request):
 
     projects = Project.objects.all()
@@ -84,6 +113,12 @@ def logout_view(request):
 
 def option_view(request):
     return render(request, "emag_admin/option.html")
+
+
+def etab_view(request):
+
+    etab = Event.objects.all()
+    return render(request, "emag_admin/etab.html", {"etab": etab})
 
 
 def authenticate_view(request):
