@@ -2,6 +2,7 @@
 {% block body %}
 
 <div class="container-fluid my-5">
+  
     
     <table class="table">
         <thead class="thead-dark">
@@ -14,6 +15,7 @@
           </tr>
         </thead>
         <tbody>
+        
         {% for et in etab %} 
           <tr>
             <th scope="row">{{ et.id }}</th>
@@ -27,8 +29,11 @@
             </td>
           </tr>
           {% endfor %}
+         
         </tbody>
+        
       </table>
+     
 </div>
 
 

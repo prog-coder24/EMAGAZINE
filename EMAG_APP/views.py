@@ -65,6 +65,15 @@ def add_event_view(request):
         return redirect(etab_view)
 
 
+@login_required(login_url='/login/')
+def deleteEvent_view(request, pk):
+
+    Event.objects.filter(id=pk).delete()
+
+    de = Event.objects.all()
+    return render(request, etab_view, {"de": de})
+
+
 def project_view(request):
 
     projects = Project.objects.all()

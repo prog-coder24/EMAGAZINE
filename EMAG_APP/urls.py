@@ -8,6 +8,7 @@ urlpatterns = [
     path('menu/events/', event_view),
     path('events/<int:pk>', displayevent_view),
     path('add-event/', event_form_view),
+    path('<int:pk>/delete/', deleteEvent_view),
     path('menu/', menu_view),
     path('menu/achievements/', achievement_view),
     path('achievements/<int:pk>', displayach_view),
