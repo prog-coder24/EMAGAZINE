@@ -42,6 +42,7 @@ class EventAdmin(admin.ModelAdmin):
 
 
 admin.site.register(User, UserAdmin)
+admin.site.register(Subscriber)
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(Achievement, AchievementAdmin)
 admin.site.register(Event, EventAdmin)

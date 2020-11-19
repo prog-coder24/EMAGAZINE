@@ -1,30 +1,31 @@
 {% extends 'lognav.html' %}
 {% load static %}
 {% block body %}
-{% include 'DeleteEveModal.html' %}
+{% include 'DeleteAchModal.html' %}
 <div class="container-fluid my-5">
   
   <div class="my-3">
-    <button class="btn"><a href="/add-event/" ><i class="fas fa-plus-square"></i> ADD EVENT</a></button>
+    <button class="btn"><a href="/add-achievement/" ><i class="fas fa-plus-square"></i> ADD ACHIEVEMENT </a></button>
   </div>
     <table class="table">
         <thead class="thead-dark">
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Title</th>
+            <th scope="col">Field</th>
             <th scope="col">Date</th>
-            <th scope="col">Organiser</th>
             <th scope="col">Action</th>
+            
           </tr>
         </thead>
         <tbody>
         
-        {% for et in etab %} 
+        {% for at in atab %} 
           <tr>
             <th scope="row">{{ forloop.counter }}</th>
-            <td><a href="/events/{{ et.id }}">{{ et.event_title }}</a></td>
-            <td>{{ et.event_date }}</td>
-            <td>{{ et.organised_by }}</td>
+            <td><a href="/achievements/{{ at.id }}">{{ at.achievement_title }}</a></td>
+            <td>{{ at.achievement_field }}</td>
+            <td>{{ at.uploaded_at | date:'Y-m-d' }}</td>
             <td>
               <div class="row">
                 <a
@@ -32,11 +33,11 @@
                   title="Delete"
                   data-toggle="modal"
                   data-target="#confirmDeleteModal"
-                  id="{{et.id}}"
+                  id="{{at.id}}"
                 >
                   <i class="fas fa-trash"></i>
                 </a>
-                <a href="/update/{{et.id}}"><i class="fas fa-edit"></i></a>
+                <a href="/update/achievement/{{at.id}}"><i class="fas fa-edit"></i></a>
               </div>            
             </td>
           </tr>

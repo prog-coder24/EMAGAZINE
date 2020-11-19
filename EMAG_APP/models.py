@@ -35,7 +35,8 @@ class Project(models.Model):
     project_description = models.TextField(null=False, blank=False)
     project_tags = models.CharField(max_length=400, null=True, blank=True)
     project_data = models.FileField(null=True, blank=True)
-    project_banner = models.ImageField(null=True, blank=True)
+    project_banner = models.ImageField(null=False, blank=False)
+    dept_name = models.TextField(null=True, blank=True)
     uploaded_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
@@ -47,10 +48,10 @@ class Achievement(models.Model):
         to=User, on_delete=models.CASCADE, null=True, related_name='achievements')
     achievement_title = models.CharField(
         max_length=755, null=False, blank=False, unique=True)
-    achievement_field = models.CharField(
-        null=False, blank=False, max_length=400)
+    achievement_field = models.TextField(
+        null=True, blank=True)
     achievement_data = models.FileField(null=True, blank=True)
-    achievement_banner = models.ImageField(null=True, blank=True)
+    achievement_banner = models.ImageField(null=False, blank=False)
     achievement_tags = models.CharField(max_length=400, null=True, blank=True)
     achievement_description = models.TextField(null=False, blank=False)
     uploaded_at = models.DateTimeField(default=timezone.now)
@@ -84,3 +85,10 @@ class Event(models.Model):
 
     def __str__(self):
         return self.event_title
+
+
+class Subscriber(models.Model):
+    email_address = models.EmailField(_('email address'), unique=True)
+
+    def __str__(self):
+        return str(self.email_address)

@@ -1,0 +1,86 @@
+{% extends 'lognav.html' %}{% load static %} {% block body %}
+
+<div class="container">
+    <h1 class="text-center my-5 text-uppercase mb-3">UPDATE PROJECT</h1>
+
+    <form enctype="multipart/form-data" action="/project/update/{{project.id}}" method="POST">
+        {% csrf_token %}
+        <div class="form-group row">
+            <label for="input2" class="col-sm-3">Project title:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="input2" name="title" required value="{{project.project_title}}" />
+            </div>
+        </div>
+    <div class="form-group row">
+      <label for="post_content" class="col-sm-3 col-form-label"
+        >Project content:</label
+      >
+      <div class="col-sm-9">
+        <textarea
+          name="editor"
+          id="post_content"
+          name="editor"
+          required
+        >
+        {{ project.project_description}}
+        </textarea>
+      </div>
+    </div>
+    <br />
+    <div class="form-group row">
+      <label for="input4" class="col-sm-3 col-form-label">Project tags:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="input4" name="tags" required value="{{project.project_tags}}" />
+            </div>
+    </div>
+        <div class="form-group row">
+            <label for="exampleFormControlFile1" class="col-sm-3 col-form-label font-weight-bold">Project banner:</label
+      >
+      <div class="col-sm-9">
+          <small><a href="{{project.project_banner.url}}">Currently: {{project.project_banner.name}}</a></small>
+        <input
+          type="file"
+          class="form-control-file"
+          id="exampleFormControlFile1"
+          name="banner"
+          value="{{project.project_banner.url}}"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="exampleFormControlFile1" class="col-sm-3 col-form-label"
+        >Project data:</label
+      >
+      <div class="col-sm-9">
+        <input
+          type="file"
+          class="form-control-file"
+          id="exampleFormControlFile1"
+          name="data"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="input5" class="col-sm-3">Dept_name</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="input5" name="dept_name" value="{{project.dept_name}}" />
+            </div>
+        </div>
+       
+        <div class="form-group row">
+            <label for="input8" class="col-sm-3 col-form-label">Uploaded_at:</label>
+            <div class="col-sm-9">
+                <input class="form-control" id="input8" type="date" name="uploaded_at" required value="{{project.uploaded_at | date:'Y-m-d'}}" />
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn button my-2 btn-sm">UPDATE</button>
+        </div>
+        <script src="https://cdn.ckeditor.com/4.14.0/full/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace("editor");
+        </script>
+    </form>
+</div>
+
+{% endblock %}

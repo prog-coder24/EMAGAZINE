@@ -1,12 +1,12 @@
 {% extends 'lognav.html' %}{% load static %} {% block body %}
 
 <div class="container">
-  <h1 class="text-center my-5 text-uppercase mb-3">ADD EVENT</h1>
+  <h1 class="text-center my-5 text-uppercase mb-3">ADD PROJECT</h1>
 
-  <form enctype="multipart/form-data" action="/event/add" method="POST">
+  <form enctype="multipart/form-data" action="/project/add" method="POST">
     {% csrf_token %}
     <div class="form-group row">
-      <label for="input2" class="col-sm-3">Event title:</label>
+      <label for="input2" class="col-sm-3">Project title:</label>
       <div class="col-sm-9">
         <input
           type="text"
@@ -18,21 +18,8 @@
       </div>
     </div>
     <div class="form-group row">
-      <label for="input3" class="col-sm-3 col-form-label"
-        >Event category:</label
-      >
-      <div class="col-sm-9">
-        <select id="input3" class="form-control" name="menu">
-          <option selected>Select..</option>
-          <option>Fest</option>
-          <option>Activity</option>
-          <option>Workshop</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-group row">
       <label for="post_content" class="col-sm-3 col-form-label"
-        >Event content:</label
+        >Project content:</label
       >
       <div class="col-sm-9">
         <textarea
@@ -45,7 +32,7 @@
     </div>
     <br />
     <div class="form-group row">
-      <label for="input4" class="col-sm-3 col-form-label">Event tags:</label>
+      <label for="input4" class="col-sm-3 col-form-label">Project tags:</label>
       <div class="col-sm-9">
         <input
           type="text"
@@ -60,7 +47,7 @@
       <label
         for="exampleFormControlFile1"
         class="col-sm-3 col-form-label font-weight-bold"
-        >Event banner:</label
+        >Project banner:</label
       >
       <div class="col-sm-9">
         <input
@@ -74,7 +61,7 @@
     </div>
     <div class="form-group row">
       <label for="exampleFormControlFile1" class="col-sm-3 col-form-label"
-        >Event data:</label
+        >Project data:</label
       >
       <div class="col-sm-9">
         <input
@@ -86,31 +73,14 @@
       </div>
     </div>
     <div class="form-group row">
-      <label for="input5" class="col-sm-3">Organiser:</label>
+      <label for="input5" class="col-sm-3">Dept_name:</label>
       <div class="col-sm-9">
         <input
           type="text"
           class="form-control"
           id="input5"
-          name="organised_by"
+          name="dept_name"
         />
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="input6" class="col-sm-3">Sponsor:</label>
-      <div class="col-sm-9">
-        <input
-          type="text"
-          class="form-control"
-          id="input6"
-          name="sponsored_by"
-        />
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="input7" class="col-sm-3 col-form-label">Event date:</label>
-      <div class="col-sm-9">
-        <input class="form-control" id="input7" type="date" name="event_date" />
       </div>
     </div>
     <div class="form-group row">

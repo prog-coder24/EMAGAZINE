@@ -1,30 +1,31 @@
 {% extends 'lognav.html' %}
 {% load static %}
 {% block body %}
-{% include 'DeleteEveModal.html' %}
+{% include 'DeleteProjModal.html' %}
 <div class="container-fluid my-5">
   
   <div class="my-3">
-    <button class="btn"><a href="/add-event/" ><i class="fas fa-plus-square"></i> ADD EVENT</a></button>
+    <button class="btn"><a href="/add-project/" ><i class="fas fa-plus-square"></i> ADD PROJECT </a></button>
   </div>
     <table class="table">
         <thead class="thead-dark">
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Title</th>
+            <th scope="col">Dept_name</th>
             <th scope="col">Date</th>
-            <th scope="col">Organiser</th>
             <th scope="col">Action</th>
+            
           </tr>
         </thead>
         <tbody>
         
-        {% for et in etab %} 
+        {% for pt in ptab %} 
           <tr>
             <th scope="row">{{ forloop.counter }}</th>
-            <td><a href="/events/{{ et.id }}">{{ et.event_title }}</a></td>
-            <td>{{ et.event_date }}</td>
-            <td>{{ et.organised_by }}</td>
+            <td><a href="/projects/{{ pt.id }}">{{ pt.project_title }}</a></td>
+            <td>{{ pt.dept_name }}</td>
+            <td>{{ pt.uploaded_at }}</td>
             <td>
               <div class="row">
                 <a
@@ -32,11 +33,11 @@
                   title="Delete"
                   data-toggle="modal"
                   data-target="#confirmDeleteModal"
-                  id="{{et.id}}"
+                  id="{{pt.id}}"
                 >
                   <i class="fas fa-trash"></i>
                 </a>
-                <a href="/update/{{et.id}}"><i class="fas fa-edit"></i></a>
+                <a href="/update/project/{{pt.id}}"><i class="fas fa-edit"></i></a>
               </div>            
             </td>
           </tr>
